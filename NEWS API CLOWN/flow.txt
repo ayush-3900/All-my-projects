@@ -1,0 +1,18 @@
+==> Components of the website 
+1. Sticky Nav bar
+2. page one with button get api key
+3. An iframe tag showing code 
+4. A panel with diiferent logos 
+i) walmart
+ii) General assembly
+iii) accenture
+iv) samsung
+v) shopify
+vi) crane
+5. A section containing three icons
+i)Worldwide Scale
+ii)Easy Integration
+iii)Free for Development
+6. One more page with 4 icons
+7. Three card columns
+8. Footer

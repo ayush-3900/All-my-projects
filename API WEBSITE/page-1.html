@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API | page-1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: radial-gradient(rgb(234, 229, 229), rgb(157, 242, 182));
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+      .container {
+        padding: 30px;
+      }
+      h2 {
+        font-size: 50px;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+      .sec {
+        font-size: 20px;
+        color: black;
+        line-height: 30px;
+      }
+      ul li {
+        font-size: 20px;
+        line-height: 35px;
+        color: black;
+      }
+      h1 {
+        font-size: 100px;
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 5px 5px 50px gray;
+        cursor: pointer;
+      }
+      h2 {
+        color: Blue;
+        text-shadow: 5px 5px 50px rgb(35, 32, 32);
+        cursor: pointer;
+        transition: color;
+      }
+      h2:hover {
+        text-transform: scale(2);
+        color: rgb(10, 10, 110);
+      }
+      .nav-container {
+        height: 80px;
+        width: 100%;
+        background-color: rgb(74, 74, 74);
+      }
+      .nav-container ul {
+        list-style-type: none;
+      }
+      .nav-container ul a {
+        text-decoration: none;
+        font-size: 30px;
+        color: wheat;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      .nav-container ul a:hover {
+        color: blue;
+      }
+      .nav-container ul a:active {
+        color: red;
+      }
+      #logo {
+        margin-top: 40px;
+        height: 200px;
+        width: 300px;
+      }
+      #box1 {
+        font-size: 30px;
+        color: yellow;
+        margin-left: 20px;
+        margin-right: 25px;
+      }
+      #box2 {
+        font-size: 30px;
+        color: yellow;
+        margin-left: 20px;
+        margin-right: 25px;
+      }
+
+      .menu {
+        height: 600px;
+        width: 500px;
+        padding: 20px;
+        opacity: 0;
+        transform: translateX(-600px);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        background-color: rgb(75, 70, 70);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 3px;
+        transition: opacity 1s, transform 1s;
+      }
+      .head {
+        display: inline;
+        font-size: 30px;
+        color: white;
+        margin-bottom: 10px;
+      }
+      .row {
+        height: fit-content;
+        width: 100%;
+        color: white;
+        background-color: rgb(75, 70, 70);
+        font-size: 30px;
+        margin-bottom: 30px;
+        border-radius: 100px;
+      }
+      .icon button {
+        height: 30px;
+        width: 30px;
+      }
+      .icon img {
+        border-radius: 10px;
+      }
+      #ham2 {
+        height: 30px;
+        width: 30px;
+      }
+      #ham {
+        height: 10px;
+        width: 10px;
+      }
+      .pd{
+        display: inline;
+        height: fit-content;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <button id="ham2" onclick="fun2()">
+        <img src="ham.png" alt="" height="20px" width="20px" />
+      </button>
+      <p class="head">Personal Details</p>
+      <button class="row r1" id="Name">
+        Name:
+        <div class = "pd" id="name"></div>
+      </button>
+      <button class="row r2" id="Contact">
+        Contact:
+        <div class = "pd" id="contact"></div>
+      </button>
+      <button class="row r3" id="Email">
+        Email:
+        <div class = "pd" id="email"></div>
+      </button>
+      <button class="row r3" id="settings">Settings</button>
+    </div>
+
+    <nav>
+      <div class="nav-container flex">
+        <div class="icon">
+          <button onclick="fun()">
+            <img src="ham.png" alt="" height="20px" width="20px" />
+          </button>
+        </div>
+        <div class="img">
+          <img src="logo.png" alt="" id="logo" />
+        </div>
+        <ul class="flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div id="box1"></div>
+        <div id="box2"></div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>API</h1>
+      <div class="sec1">
+        <h2>What is an API?</h2>
+        <p class="sec1-data sec">
+          An API, or application programming interface, is a set of defined
+          rules that enable different applications to communicate with each
+          other. It acts as an intermediary layer that processes data transfers
+          between systems, letting companies open their application data and
+          functionality to external third-party developers, business partners,
+          and internal departments within their companies. <br />
+          The definitions and protocols within an API help businesses connect
+          the many different applications they use in day-to-day operations,
+          which saves employees time and breaks down silos that hinder
+          collaboration and innovation. For developers, API documentation
+          provides the interface for communication between applications,
+          simplifying application integration.
+        </p>
+      </div>
+
+      <div class="sec2">
+        <h2>How an API works</h2>
+        <p class="sec2-data sec">
+          A simple way to understand how APIs work is to look at a common
+          example—third-party payment processing. When a user purchases a
+          product on an ecommerce site, they may be prompted to “Pay with
+          Paypal” or another type of third-party system. This function relies on
+          APIs to make the connection. <br />
+        </p>
+        <ul class="sec2-list list">
+          <li>
+            When the buyer clicks the payment button, an API calls to retrieve
+            information—also known as a request. This request is processed from
+            an application to the web server via the API's Uniform Resource
+            Identifier (URI) and includes a request verb, headers, and
+            sometimes, a request body.
+          </li>
+          <li>
+            After receiving a valid request from the product webpage, the API
+            makes a call to the external program or web server, in this case,
+            the third-party payment system.
+          </li>
+          <li>
+            The server sends a response to the API with the requested
+            information.
+          </li>
+          <li>
+            The API transfers the data to the initial requesting application,
+            here the product website.
+          </li>
+        </ul>
+        <p class="sec2-data sec">
+          While the data transfer will differ depending on the web service being
+          used, the requests and responses all happen through an API. There is
+          no visibility on the user interface, meaning APIs exchange data within
+          the computer or application, and appear to the user as a seamless
+          connection.
+        </p>
+      </div>
+
+      <div class="sec3">
+        <h2>API benefits</h2>
+        <p class="sec3-data sec">
+          APIs simplify design and development of new applications and services,
+          and integration and management of existing ones. But they offer other
+          significant benefits to developers and organizations at large.
+        </p>
+        <p class="sec3-data sec">
+          <b>Improved collaboration.</b>The average enterprise uses almost 1,200
+          cloud applications (link resides outside IBM.com), many of which are
+          disconnected. APIs enable integration so that these platforms and apps
+          can seamlessly communicate with one another. Through this integration,
+          companies can automate workflows and improve workplace collaboration.
+          Without APIs, many enterprises would lack connectivity, causing
+          information silos that compromise productivity and performance.
+        </p>
+        <p class="sec3-data sec">
+          <b> Accelerated innovation.</b>APIs offer flexibility, allowing
+          companies to make connections with new business partners, offer new
+          services to their existing market, and, ultimately, access new markets
+          that can generate massive returns and drive digital transformation.
+          For example, the company Stripe began as an API with just seven lines
+          of code. The company has since partnered with many of the biggest
+          enterprises in the world, diversified to offer loans and corporate
+          cards, and was recently valued at USD 36 billion (link resides outside
+          ibm.com).
+        </p>
+        <p class="sec3-data sec">
+          <b>Data monetization. </b> Many companies choose to offer APIs for
+          free, at least initially, so that they can build an audience of
+          developers around their brand and forge relationships with potential
+          business partners. If the API grants access to valuable digital
+          assets, the business monetize it by selling access. This is referred
+          to as the API economy. When AccuWeather (link resides outside ibm.com)
+          launched its self-service developer portal to sell a wide range of API
+          packages, it took just 10 months to attract 24,000 developers, selling
+          11,000 API keys and building a thriving community in the process.
+        </p>
+        <p class="sec3-data sec">
+          <b>System security.</b> APIs separate the requesting application from
+          the infrastructure of the responding service, and offer layers of
+          security between the two as they communicate. For example, API calls
+          typically require authentication credentials; HTTP headers, cookies or
+          query strings can provide additional security during data exchange and
+          an API gateway can control access to further minimize security
+          threats.
+        </p>
+        <p class="sec3-data sec">
+          <b>End-user security and privacy.</b> Just as APIs provide added
+          protection within a network, they can also provide another layer of
+          protection for personal users. When a website requests a user’s
+          location, which is provided via a location API, the user can then
+          decide whether to allow or deny this request. Many web browsers and
+          mobile operating systems, like iOS, have permission structures
+          built-in when APIs request access to applications and their data. When
+          the app must access files through an API, file systems such as
+          windows, Mac and Linux use permissions for that access.
+        </p>
+      </div>
+
+      <div class="sec4 sec">
+        <h2>APIs in action: common examples</h2>
+        <p class="sec4-data sec">
+          Because APIs allow companies to open access to their resources while
+          maintaining security and control, they have become a valuable aspect
+          of modern business and personal applications. Here are some popular
+          examples of API uses that users encounter almost every day:
+        </p>
+        <ul>
+          <li class="sec4-list list">
+            <b>Universal logins:</b> A popular API example is the function that
+            enables people to log in to websites by using their Facebook,
+            Twitter, or Google profile login details. This convenient feature
+            allows any website to leverage an API from one of the more popular
+            services for quick authentication, saving them the time and hassle
+            of setting up a new profile for every web application or new
+            membership.
+          </li>
+          <li>
+            <b>Internet of Things (IoT): </b> These “smart devices” offer added
+            functionality, such as internet-enabled touchscreens and data
+            collection, through APIs. For example, a smart fridge can connect to
+            recipe applications or take and send notes to mobile phones via text
+            message. Internal cameras connect to various applications so that
+            users can see the contents of the refrigerator from anywhere.
+          </li>
+          <li>
+            <b> Travel booking comparisons:</b>Travel booking sites aggregate
+            thousands of flights, showcasing the cheapest options for every date
+            and destination. This service is made possible through APIs that
+            provide application users with access to the latest information
+            about availability from hotels and airlines, either via a web
+            browser or the travel booking company’s own application. With an
+            autonomous exchange of data and requests, APIs dramatically reduce
+            the time and effort involved in checking for available flights or
+            accommodation.
+          </li>
+          <li>
+            <b> Mapping apps:</b> In addition to the core APIs that display
+            static or interactive maps, these apps use other APIs and features
+            to provide users with directions, speed limits, points of interest,
+            traffic warnings and more.users communicate with an API when
+            plotting travel routes or tracking items on the move, such as a
+            delivery vehicle.
+          </li>
+          <li>
+            <b> Twitter: </b> Each Tweet contains descriptive core attributes,
+            including an author, a unique ID, a message, a timestamp when it was
+            posted, and geolocation metadata. Twitter makes the core attributes
+            of public Tweets and replies available to developers and allows them
+            to post Tweets on other webpages via the company's API.
+          </li>
+          <li>
+            <b> SaaS applications: </b> APIs are an integral part of the growth
+            in software-as-a-service (SaaS) products. Platforms like CRMs
+            (customer relationship management tools) often include a number of
+            built-in APIs that let companies integrate with applications they
+            already use, such as messaging, social media, and email apps. This
+            drastically reduces time spent switching between applications for
+            sales and marketing tasks. It also helps reduce or prevent data
+            silos that may exists between departments using different
+            applications.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("box1").innerHTML = localStorage.getItem("val1");
+    document.getElementById("box2").innerHTML = localStorage.getItem("val2");
+    document.getElementById("name").innerHTML = localStorage.getItem("val1");
+    document.getElementById("email").innerHTML = localStorage.getItem("val2");
+    document.getElementById("contact").innerHTML = localStorage.getItem("val3");
+    function fun() {
+      document.getElementById("menu").style.opacity = "1";
+      document.getElementById("menu").style.transform = "translateX(0px)";
+    }
+    function fun2() {
+      document.getElementById("menu").style.opacity = "0";
+      document.getElementById("menu").style.transform = "translateX(-600px)";
+    }
+  </script>
+</html>
